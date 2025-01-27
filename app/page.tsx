@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="bg-blue-700 text-white">
         <header className="max-w-xl w-full mx-auto px-6 py-12">
-          <h1 className="font-bold mb-2">Carucage Records</h1>
+          <h1 className="font-bold mb-3">Carucage Records</h1>
           <p>
             Carucage Records was an independent record label based out of St.
             Louis, MO and Memphis, TN. Two cousins, Cory Robinson and Taylor
@@ -32,7 +32,7 @@ export default function Home() {
       </div>
 
       <main className="max-w-xl w-full mx-auto px-6 py-12">
-        <p className="font-bold mb-2">Physical releases</p>
+        <p className="font-bold mb-6">Physical releases</p>
         <ul className="space-y-3">
           <li className="flex items-center gap-2">
             <CassetteTapeIcon className="flex-shrink-0" />
@@ -117,7 +117,7 @@ export default function Home() {
           </li>
         </ul>
 
-        <p className="mt-12 font-bold mb-2">Digital releases</p>
+        <p className="mt-12 font-bold mb-6">Digital releases</p>
         <ul className="space-y-3">
           <li className="flex items-center gap-2">
             <AudioFileIcon className="flex-shrink-0" /> DIGI-001: Bigfoot - Bird
