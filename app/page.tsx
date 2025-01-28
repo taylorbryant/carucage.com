@@ -3,6 +3,10 @@ import CassetteTapeIcon from "./_icons/cassette-tape";
 import CompactDiscIcon from "./_icons/compact-disc";
 import VinylRecordIcon from "./_icons/vinyl-record";
 
+const ReleaseIcon = ({ children }: { children: React.ReactNode }) => (
+  <div className="h-[24px] flex items-center">{children}</div>
+);
+
 export default function Home() {
   return (
     <>
@@ -34,102 +38,148 @@ export default function Home() {
       <main className="max-w-xl w-full mx-auto px-6 py-12">
         <p className="font-bold mb-6">Physical releases</p>
         <ul className="space-y-3">
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-001: Bigfoot - Folklore & Myth
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-002: Adaje / Shark Bait - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-003: Perfect Future / Wits End - Split
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-004: The Anarchist Pizza Society / Circle Circle - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-005: Innards / Two Knights - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-006: Adaje / Lizards Have Personalities - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-007: Innards / The Reptilian - Split
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-008: Dads - Brush Your Teeth, Again ;)
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-009: Family Might - Floor Connections
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-010: Tubetops - S/T
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-011: Loud? - S/T
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-012: Sailor Heart - Since the Apple Orchard
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-013: Foxing / Send Away Stranger - Split
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-014: Old Gray / Girl Scouts - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-016: Gryscl / Coma Regalia - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-017: Joie De Vivre / The Please & Thank Yous / Emo Side Project
             - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-018: Alta - Places
           </li>
-          <li className="flex items-center gap-2">
-            <CompactDiscIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CompactDiscIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-019: Shark Bait - Phantom Feelings
           </li>
-          <li className="flex items-center gap-2">
-            <CassetteTapeIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <CassetteTapeIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-020: Gryscl / Weakness - Split
           </li>
-          <li className="flex items-center gap-2">
-            <VinylRecordIcon className="flex-shrink-0" />
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <VinylRecordIcon className="flex-shrink-0" />
+            </ReleaseIcon>
             CAR-021: Yusuke / Delos - Split
           </li>
         </ul>
 
         <p className="mt-12 font-bold mb-6">Digital releases</p>
         <ul className="space-y-3">
-          <li className="flex items-center gap-2">
-            <AudioFileIcon className="flex-shrink-0" /> DIGI-001: Bigfoot - Bird
-            Song Demos
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <AudioFileIcon className="flex-shrink-0" />{" "}
+            </ReleaseIcon>{" "}
+            DIGI-001: Bigfoot - Bird Song Demos
           </li>
-          <li className="flex items-center gap-2">
-            <AudioFileIcon className="flex-shrink-0" /> DIGI-002: Close to Me -
-            Complete Discography
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <AudioFileIcon className="flex-shrink-0" />{" "}
+            </ReleaseIcon>{" "}
+            DIGI-002: Close to Me - Complete Discography
           </li>
-          <li className="flex items-center gap-2">
-            <AudioFileIcon className="flex-shrink-0" /> DIGI-003: Various
-            Artists - 420 rpm
+          <li className="flex gap-2">
+            <ReleaseIcon>
+              <AudioFileIcon className="flex-shrink-0" />{" "}
+            </ReleaseIcon>{" "}
+            DIGI-003: Various Artists - 420 rpm
           </li>
         </ul>
       </main>
