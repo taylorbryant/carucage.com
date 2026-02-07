@@ -1,194 +1,109 @@
-import AudioFileIcon from "./_icons/audio-file";
-import CassetteTapeIcon from "./_icons/cassette-tape";
-import CompactDiscIcon from "./_icons/compact-disc";
-import VinylRecordIcon from "./_icons/vinyl-record";
+const releases = [
+  { id: "CAR-001", artist: "Bigfoot", title: "Folklore & Myth", format: "Cassette" },
+  { id: "CAR-002", artist: "Adaje / Shark Bait", title: "Split", format: "Cassette" },
+  { id: "CAR-003", artist: "Perfect Future / Wits End", title: "Split", format: "Vinyl" },
+  { id: "CAR-004", artist: "The Anarchist Pizza Society / Circle Circle", title: "Split", format: "Cassette" },
+  { id: "CAR-005", artist: "Innards / Two Knights", title: "Split", format: "Vinyl" },
+  { id: "CAR-006", artist: "Adaje / Lizards Have Personalities", title: "Split", format: "Vinyl" },
+  { id: "CAR-007", artist: "Innards / The Reptilian", title: "Split", format: "Vinyl" },
+  { id: "CAR-008", artist: "Dads", title: "Brush Your Teeth, Again ;)", format: "Cassette" },
+  { id: "CAR-009", artist: "Family Might", title: "Floor Connections", format: "Cassette" },
+  { id: "CAR-010", artist: "Tubetops", title: "S/T", format: "Cassette" },
+  { id: "CAR-011", artist: "Loud?", title: "S/T", format: "Cassette" },
+  { id: "CAR-012", artist: "Sailor Heart", title: "Since the Apple Orchard", format: "Cassette" },
+  { id: "CAR-013", artist: "Foxing / Send Away Stranger", title: "Split", format: "Vinyl" },
+  { id: "CAR-014", artist: "Old Gray / Girl Scouts", title: "Split", format: "Cassette" },
+  { id: "CAR-016", artist: "Gryscl / Coma Regalia", title: "Split", format: "Vinyl" },
+  { id: "CAR-017", artist: "Joie De Vivre / The Please & Thank Yous / Emo Side Project", title: "Split", format: "Vinyl" },
+  { id: "CAR-018", artist: "Alta", title: "Places", format: "Vinyl" },
+  { id: "CAR-019", artist: "Shark Bait", title: "Phantom Feelings", format: "CD" },
+  { id: "CAR-020", artist: "Gryscl / Weakness", title: "Split", format: "Cassette" },
+  { id: "CAR-021", artist: "Yusuke / Delos", title: "Split", format: "Vinyl" },
+];
 
-const ReleaseIcon = ({ children }: { children: React.ReactNode }) => (
-  <div className="h-[20px] flex items-center flex-shrink-0">{children}</div>
-);
+const digitalReleases = [
+  { id: "DIGI-001", artist: "Bigfoot", title: "Bird Song Demos" },
+  { id: "DIGI-002", artist: "Close to Me", title: "Complete Discography" },
+  { id: "DIGI-003", artist: "Various Artists", title: "420 rpm" },
+];
 
 export default function Home() {
   return (
-    <main className="max-w-lg w-full mx-auto px-6 py-16 md:py-24">
-      <header className="mb-16">
-        <h1 className="text-lg font-semibold tracking-tight mb-4">
+    <main className="max-w-xl w-full mx-auto px-6 py-16 md:py-24">
+      <header className="mb-20">
+        <h1
+          className="text-2xl font-medium tracking-tight mb-5"
+          style={{ fontFamily: "'Newsreader', Georgia, serif" }}
+        >
           Carucage Records
         </h1>
-        <p className="text-sm leading-relaxed text-muted">
-          Independent record label based out of St. Louis, MO and Memphis, TN.
-          Two cousins, Cory Robinson and Taylor Bryant, operated the label from
-          2011 to 2015, releasing 10 cassette tapes, 9 vinyl records, 1 CD, and
-          3 digital releases.
+        <p className="text-sm leading-relaxed text-muted max-w-md text-pretty">
+          Independent record label from St. Louis, MO and Memphis, TN, operated
+          by cousins Cory Robinson and Taylor Bryant from 2011 to 2015.
         </p>
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-5 mt-5">
           <a
             className="text-sm text-muted hover:text-foreground transition-colors"
             href="https://music.carucage.com"
           >
-            Bandcamp &rarr;
+            Bandcamp
           </a>
           <a
             className="text-sm text-muted hover:text-foreground transition-colors"
             href="https://www.discogs.com/label/390082-Carucage-Records"
           >
-            Discogs &rarr;
+            Discogs
           </a>
         </div>
       </header>
 
-      <section className="mb-16">
-        <h2 className="text-xs font-medium uppercase tracking-widest text-muted mb-6">
+      <section className="mb-20">
+        <h2 className="text-xs font-medium uppercase tracking-widest text-muted mb-4">
           Physical
         </h2>
-        <ul className="space-y-3 text-sm">
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-001: Bigfoot - Folklore & Myth
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-002: Adaje / Shark Bait - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-003: Perfect Future / Wits End - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-004: The Anarchist Pizza Society / Circle Circle - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-005: Innards / Two Knights - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-006: Adaje / Lizards Have Personalities - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-007: Innards / The Reptilian - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-008: Dads - Brush Your Teeth, Again ;)
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-009: Family Might - Floor Connections
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-010: Tubetops - S/T
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-011: Loud? - S/T
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-012: Sailor Heart - Since the Apple Orchard
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-013: Foxing / Send Away Stranger - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-014: Old Gray / Girl Scouts - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-016: Gryscl / Coma Regalia - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-017: Joie De Vivre / The Please & Thank Yous / Emo Side Project
-            - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-018: Alta - Places
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CompactDiscIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-019: Shark Bait - Phantom Feelings
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <CassetteTapeIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-020: Gryscl / Weakness - Split
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <VinylRecordIcon className="text-muted" />
-            </ReleaseIcon>
-            CAR-021: Yusuke / Delos - Split
-          </li>
-        </ul>
+        <div className="border-t border-border">
+          {releases.map((r) => (
+            <div
+              key={r.id}
+              className="flex items-baseline justify-between gap-4 py-2.5 border-b border-border"
+            >
+              <div className="flex items-baseline gap-3 min-w-0">
+                <span className="text-xs text-muted font-mono flex-shrink-0">
+                  {r.id}
+                </span>
+                <span className="text-sm truncate">
+                  {r.artist}
+                  <span className="text-muted italic"> &mdash; {r.title}</span>
+                </span>
+              </div>
+              <span className="text-xs text-muted flex-shrink-0">
+                {r.format}
+              </span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section>
-        <h2 className="text-xs font-medium uppercase tracking-widest text-muted mb-6">
+        <h2 className="text-xs font-medium uppercase tracking-widest text-muted mb-4">
           Digital
         </h2>
-        <ul className="space-y-3 text-sm">
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <AudioFileIcon className="text-muted" />
-            </ReleaseIcon>
-            DIGI-001: Bigfoot - Bird Song Demos
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <AudioFileIcon className="text-muted" />
-            </ReleaseIcon>
-            DIGI-002: Close to Me - Complete Discography
-          </li>
-          <li className="flex items-center gap-3">
-            <ReleaseIcon>
-              <AudioFileIcon className="text-muted" />
-            </ReleaseIcon>
-            DIGI-003: Various Artists - 420 rpm
-          </li>
-        </ul>
+        <div className="border-t border-border">
+          {digitalReleases.map((r) => (
+            <div
+              key={r.id}
+              className="flex items-baseline gap-3 py-2.5 border-b border-border"
+            >
+              <span className="text-xs text-muted font-mono flex-shrink-0">
+                {r.id}
+              </span>
+              <span className="text-sm">
+                {r.artist}
+                <span className="text-muted italic"> &mdash; {r.title}</span>
+              </span>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );

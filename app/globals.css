@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
-  --background: #fafafa;
+  --background: #faf9f7;
   --foreground: #1a1a1a;
-  --muted: #737373;
-  --border: #e5e5e5;
+  --muted: #868686;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 body {
