@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --muted: #737373;
+  --border: #e5e5e5;
 }
 
 body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--foreground);
   background: var(--background);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
