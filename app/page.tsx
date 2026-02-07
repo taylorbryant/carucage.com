@@ -44,13 +44,13 @@ export default function Home() {
         </p>
         <div className="flex gap-5 mt-5">
           <a
-            className="text-sm text-muted hover:text-foreground transition-colors"
+            className="text-sm text-blue-600 hover:text-blue-800 transition-colors"
             href="https://music.carucage.com"
           >
             Bandcamp
           </a>
           <a
-            className="text-sm text-muted hover:text-foreground transition-colors"
+            className="text-sm text-blue-600 hover:text-blue-800 transition-colors"
             href="https://www.discogs.com/label/390082-Carucage-Records"
           >
             Discogs
