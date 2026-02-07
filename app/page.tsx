@@ -32,9 +32,10 @@ export default function Home() {
     <main className="max-w-xl w-full mx-auto px-6 py-16 md:py-24">
       <header className="mb-20">
         <h1
-          className="text-2xl font-medium tracking-tight mb-5"
+          className="flex items-center gap-3 text-2xl font-medium tracking-tight mb-5"
           style={{ fontFamily: "'Newsreader', Georgia, serif" }}
         >
+          <span className="inline-block w-3 h-3 rounded-full bg-blue-600 flex-shrink-0" />
           Carucage Records
         </h1>
         <p className="text-sm leading-relaxed text-muted max-w-md text-pretty">

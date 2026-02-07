@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
-  --background: #faf9f7;
+  --background: #f5f5f5;
   --foreground: #1a1a1a;
   --muted: #868686;
   --border: rgba(0, 0, 0, 0.08);
