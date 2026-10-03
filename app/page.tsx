@@ -35,7 +35,7 @@ export default function Home() {
           className="flex items-center gap-3 text-2xl font-medium tracking-tight mb-5"
           style={{ fontFamily: "'Newsreader', Georgia, serif" }}
         >
-          <span className="inline-block w-3 h-3 rounded-full bg-blue-600 flex-shrink-0" />
+          <span className="inline-block w-3 h-3 rounded-full bg-blue-600 shrink-0" />
           Carucage Records
         </h1>
         <p className="text-sm leading-relaxed text-muted max-w-md text-pretty">
@@ -69,7 +69,7 @@ export default function Home() {
               className="flex items-baseline justify-between gap-4 py-2.5 border-b border-border"
             >
               <div className="flex items-baseline gap-3 min-w-0">
-                <span className="text-xs text-muted font-mono flex-shrink-0">
+                <span className="text-xs text-muted font-mono shrink-0">
                   {r.id}
                 </span>
                 <span className="text-sm truncate">
@@ -77,7 +77,7 @@ export default function Home() {
                   <span className="text-muted italic"> &mdash; {r.title}</span>
                 </span>
               </div>
-              <span className="text-xs text-muted flex-shrink-0">
+              <span className="text-xs text-muted shrink-0">
                 {r.format}
               </span>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
               key={r.id}
               className="flex items-baseline gap-3 py-2.5 border-b border-border"
             >
-              <span className="text-xs text-muted font-mono flex-shrink-0">
+              <span className="text-xs text-muted font-mono shrink-0">
                 {r.id}
               </span>
               <span className="text-sm">
