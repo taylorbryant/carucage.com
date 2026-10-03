@@ -26,4 +26,5 @@ Original cover artwork from the label and artist Bandcamp pages, retrieved Octob
 | CAR-021 | Yusuke / Delos — Split | [Bandcamp](https://yusuke.bandcamp.com/album/split-7-with-delos-2) | [Original cover](https://f4.bcbits.com/img/a1642812357_5.jpg) |
 | DIGI-001 | Bigfoot — Bird Song Demos | [Bandcamp](https://music.carucage.com/album/bird-song-demos) | [Original cover](https://f4.bcbits.com/img/a2181158454_5.jpg) |
 | DIGI-002 | Close to Me — Complete Discography | [Bandcamp](https://music.carucage.com/album/complete-discography) | [Original cover](https://f4.bcbits.com/img/a1501593460_5.jpg) |
-| DIGI-003 | Various Artists — 420 rpm | [Bandcamp](https://music.carucage.com/album/420-rpm) | [Original cover](https://f4.bcbits.com/img/a1427212866_5.jpg) |
+| DIGI-003 | Mouth of Man — Everything. Ever. | [Bandcamp](https://music.carucage.com/album/everything-ever-2) | [Original cover](https://f4.bcbits.com/img/a1494673746_5.jpg) |
+| DIGI-004 | Various Artists — 420 rpm | [Bandcamp](https://music.carucage.com/album/420-rpm) | [Original cover](https://f4.bcbits.com/img/a1427212866_5.jpg) |

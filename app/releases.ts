@@ -199,10 +199,18 @@ export const releases: Release[] = [
   },
   {
     "id": "DIGI-003",
+    "artist": "Mouth of Man",
+    "title": "Everything. Ever.",
+    "format": "Digital",
+    "artwork": "/releases/digi-003-everything-ever.jpg",
+    "href": "https://music.carucage.com/album/everything-ever-2"
+  },
+  {
+    "id": "DIGI-004",
     "artist": "Various Artists",
     "title": "420 rpm",
     "format": "Digital",
-    "artwork": "/releases/digi-003.jpg",
+    "artwork": "/releases/digi-004.jpg",
     "href": "https://music.carucage.com/album/420-rpm"
   }
 ];
