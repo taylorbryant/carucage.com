@@ -8,7 +8,13 @@ export type Release = {
   href: string;
 } & (
   | { format: "Vinyl"; vinylSize: 7 | 12 }
-  | { format: Exclude<ReleaseFormat, "Vinyl">; vinylSize?: never }
+  | {
+      format: "Cassette";
+      vinylSize?: never;
+      // Display-only framing; the original source artwork is preserved.
+      artworkCrop?: { position: string; zoom?: number };
+    }
+  | { format: Exclude<ReleaseFormat, "Vinyl" | "Cassette">; vinylSize?: never }
 );
 
 export const releases: Release[] = [
@@ -17,6 +23,7 @@ export const releases: Release[] = [
     "artist": "Bigfoot",
     "title": "Folklore & Myth",
     "format": "Cassette",
+    "artworkCrop": { "position": "100% 50%" },
     "artwork": "/releases/car-001.jpg",
     "href": "https://music.carucage.com/album/folklore-myth"
   },
@@ -25,6 +32,7 @@ export const releases: Release[] = [
     "artist": "Adaje / Shark Bait",
     "title": "Split",
     "format": "Cassette",
+    "artworkCrop": { "position": "100% 50%", "zoom": 1.08 },
     "artwork": "/releases/car-002.jpg",
     "href": "https://music.carucage.com/album/adaje-shark-bait-split"
   },
@@ -77,6 +85,7 @@ export const releases: Release[] = [
     "artist": "Dads",
     "title": "Brush Your Teeth, Again ;)",
     "format": "Cassette",
+    "artworkCrop": { "position": "100% 50%" },
     "artwork": "/releases/car-008.jpg",
     "href": "https://music.carucage.com/album/brush-your-teeth-again"
   },
@@ -93,6 +102,7 @@ export const releases: Release[] = [
     "artist": "Tubetops",
     "title": "S/T",
     "format": "Cassette",
+    "artworkCrop": { "position": "100% 50%" },
     "artwork": "/releases/car-010.jpg",
     "href": "https://music.carucage.com/album/self-titled-ep"
   },
@@ -101,6 +111,7 @@ export const releases: Release[] = [
     "artist": "Loud?",
     "title": "S/T",
     "format": "Cassette",
+    "artworkCrop": { "position": "100% 50%" },
     "artwork": "/releases/car-011.jpg",
     "href": "https://music.carucage.com/album/self-titled"
   },
@@ -109,6 +120,7 @@ export const releases: Release[] = [
     "artist": "Sailor Heart",
     "title": "Since the Apple Orchard",
     "format": "Cassette",
+    "artworkCrop": { "position": "0% 100%", "zoom": 1.25 },
     "artwork": "/releases/car-012.jpg",
     "href": "https://mysailorheart.bandcamp.com/album/since-the-apple-orchard"
   },
@@ -126,6 +138,7 @@ export const releases: Release[] = [
     "artist": "Old Gray / Girl Scouts",
     "title": "Split",
     "format": "Cassette",
+    "artworkCrop": { "position": "60% 0%", "zoom": 1.12 },
     "artwork": "/releases/car-014.jpg",
     "href": "https://oldgray.bandcamp.com/album/old-gray-girl-scouts-split"
   },

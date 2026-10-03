@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import type { Release } from "./releases";
 import styles from "./release-catalog.module.css";
 
@@ -16,17 +17,14 @@ export default function ReleaseArtwork({ release, eager = false }: { release: Re
   );
 
   if (release.format === "Cassette") {
+    const cropStyle = {
+      "--art-position": release.artworkCrop?.position ?? "50% 50%",
+      "--art-zoom": release.artworkCrop?.zoom ?? 1,
+    } as CSSProperties;
+
     return (
       <span className={styles.cassetteCase} aria-hidden="true">
-        <span className={styles.caseInsert}>
-          <span className={styles.caseArtwork}>{cover}</span>
-          <span className={styles.caseCaption}>
-            <span className={styles.caseArtist}>{release.artist}</span>
-            <span className={styles.caseTitle}>{release.title}</span>
-            <span className={styles.caseCatalog}>{release.id}</span>
-          </span>
-        </span>
-        <span className={styles.caseSpine}>CARUCAGE RECORDS · {release.id}</span>
+        <span className={styles.caseInsert} style={cropStyle}>{cover}</span>
         <span className={styles.caseLid} />
       </span>
     );

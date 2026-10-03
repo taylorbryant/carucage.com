@@ -10,6 +10,10 @@ their size: Alta's *Places* is 12-inch; the other eight records are 7-inch.
 Artwork is stored in
 `public/releases`; `public/releases/SOURCES.md` records its source pages.
 
+Cassette cases display only the cover artwork. Optional `artworkCrop` positions
+and zoom levels frame wraparound scans and square covers without changing the
+source images. Release details stay below each case.
+
 The shelf supports filtering by format, mouse and keyboard interaction, and tap
 selection on touchscreens. CSS renders the cassette cases, sliding records, and CD case;
 animations respect the visitor's reduced-motion preference. All releases and
