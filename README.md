@@ -2,6 +2,19 @@
 
 Carucage Records was an independent record label based out of St. Louis, MO and Memphis, TN.
 
+## Release catalog
+
+The catalog lives in `app/releases.ts`. Each entry includes its original catalog
+number, format, local cover image, and Bandcamp link. Vinyl entries also specify
+their size: Alta's *Places* is 12-inch; the other eight records are 7-inch.
+Artwork is stored in
+`public/releases`; `public/releases/SOURCES.md` records its source pages.
+
+The shelf supports filtering by format, mouse and keyboard interaction, and tap
+selection on touchscreens. CSS renders the cassette cases, sliding records, and CD case;
+animations respect the visitor's reduced-motion preference. All releases and
+listening links are also present in the initial HTML.
+
 ## Development
 
 Use Bun 1.4.2 as the package manager and Node.js 22 (`nvm use`) for Next.js.

@@ -1,0 +1,268 @@
+.release {
+  min-width: 0;
+}
+
+.artworkButton {
+  --tilt: -3deg;
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 268px;
+  place-items: center;
+  isolation: isolate;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.release:nth-child(even) .artworkButton { --tilt: 3deg; }
+.release:nth-child(3n) .artworkButton { --tilt: -2deg; }
+
+.cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.record, .cassetteCase, .cd, .digital {
+  position: relative;
+  display: block;
+  transform: rotate(var(--tilt));
+  transition: transform 400ms cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Paper sleeve, with the disc sitting behind its open right edge. */
+.record {
+  width: 66%;
+  max-width: 220px;
+  aspect-ratio: 1;
+  translate: -8% 0;
+}
+
+.record[data-vinyl-size="7"] {
+  width: 54%;
+  max-width: 180px;
+}
+
+.sleeve {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;
+  background: #e7e3d9;
+  border-radius: 1px 2px 2px 1px;
+  box-shadow: 1px 2px 3px #0003, 0 10px 16px -8px #0005;
+}
+
+.sleeve .cover { border-radius: inherit; }
+
+.sleeve::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border-radius: inherit;
+  background: linear-gradient(90deg, #fff2, transparent 1.5%, #0001 2%, transparent 3%, transparent 97%, #0003 99%, #fff3);
+  box-shadow: inset 0 0 0 1px #0001, inset 0 1px 0 #fff4;
+}
+
+.vinyl {
+  position: absolute;
+  inset: 3%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 30deg, #0000, #ffffff18 15deg, #0000 35deg, #0000 150deg, #ffffff1a 180deg, #0000 210deg, #0000 290deg, #ffffff12 310deg, #0000 340deg),
+    repeating-radial-gradient(circle, #161719 0 1px, #292a2b 1.3px 1.8px, #121314 2px 3px);
+  box-shadow: 0 0 0 1px #111, 2px 3px 5px #0003;
+  transform: translateX(24%) rotate(-20deg);
+  transition: transform 500ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.recordLabel {
+  position: relative;
+  display: block;
+  width: 34%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #0a0a0a, 0 0 0 4px #ffffff0a;
+}
+
+.spindle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--background);
+  box-shadow: 0 0 0 2px #0007;
+  translate: -50% -50%;
+}
+
+/* Clear plastic cassette case with a printed J-card behind the lid. */
+.cassetteCase {
+  width: 52%;
+  max-width: 160px;
+  aspect-ratio: .68;
+  border-radius: 4px;
+  background: linear-gradient(110deg, #a1aaa8, #e1e5df 5%, #f8faf5 45%, #9ea5a0);
+  box-shadow: inset 0 0 0 1px #7d85817a, inset 0 0 0 2px #ffffffe0, 2px 2px 0 #a8ada9, 3px 3px 0 #c9cec8, 4px 5px 5px #0002, 0 13px 18px -7px #0005;
+}
+
+.caseInsert {
+  position: absolute;
+  inset: 4px 4px 4px 13px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ebe7dc;
+  box-shadow: 0 0 0 1px #0002;
+}
+
+.caseArtwork {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}
+
+.caseCaption {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 9px 8px 7px;
+  color: #363a32;
+  text-align: left;
+}
+
+.caseArtist {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: pretty;
+}
+
+.caseTitle {
+  margin-top: 3px;
+  font-size: 7px;
+  line-height: 1.3;
+}
+
+.caseCatalog {
+  margin-top: auto;
+  padding-top: 4px;
+  font-family: monospace;
+  font-size: 6px;
+  letter-spacing: .1em;
+}
+
+.caseSpine {
+  position: absolute;
+  inset: 4px auto 4px 3px;
+  display: flex;
+  width: 9px;
+  align-items: center;
+  justify-content: center;
+  background: #d4d1c5;
+  color: #41463d;
+  box-shadow: inset 1px 0 #fff5, inset -1px 0 #0002;
+  font-family: monospace;
+  font-size: 5px;
+  letter-spacing: .12em;
+  writing-mode: vertical-rl;
+}
+
+.caseLid {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, #fff4, transparent 22%, transparent 46%, #ffffff12 47%, transparent 58%, #ffffff08 90%, #fff3);
+  box-shadow: inset 0 0 0 1px #8f97918a, inset 0 0 0 3px #ffffffe0, inset -4px 0 1px #0002, inset 4px 0 2px #ffffff60;
+}
+
+.cd {
+  width: 73%;
+  max-width: 235px;
+  aspect-ratio: 1.13;
+  translate: -5% 0;
+}
+
+.jewelCase {
+  position: absolute;
+  inset: 0;
+  display: block;
+  padding: 3px 3px 3px 9%;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #ced0ce, #ffffff80 20%, #686e6b90);
+  box-shadow: inset 0 0 0 1px #b5b8b6, inset 0 0 0 2px #fff9, 1px 3px 4px #0003, 0 12px 16px -8px #0005;
+}
+
+.jewelCase::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(135deg, #fff3, transparent 28%, transparent 70%, #ffffff0a);
+}
+
+.cdSpine {
+  position: absolute;
+  inset: 2% auto 2% 1%;
+  width: 7%;
+  background: repeating-linear-gradient(0deg, #151817 0 1px, #474d49 1px 2px);
+}
+
+.compactDisc {
+  position: absolute;
+  inset: 3% auto 3% 8%;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(#aeb8b3, #e7ded3 20deg, #b2cce3 42deg, #dcd6d7 65deg, #afb8b3 90deg, #fafaf7 140deg, #b4c8c6 175deg, #dec5d4 200deg, #dccdaa 235deg, #edf4ee 275deg, #aeb8b3);
+  box-shadow: 0 0 0 1px #0002, 2px 3px 5px #0003;
+  transform: translateX(20%) rotate(-30deg);
+  transition: transform 500ms cubic-bezier(.22, 1, .36, 1);
+}
+.cdHub {
+  width: 15%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--background);
+  box-shadow: 0 0 0 8px #ffffff50, 0 0 0 9px #0001, 0 0 0 14px #ffffff40;
+}
+
+.digital {
+  width: 66%;
+  max-width: 220px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 1px #0001, 0 3px 3px #0001, 0 12px 18px -8px #0004;
+}
+
+.artworkButton[aria-pressed="true"] :is(.record, .cassetteCase, .cd, .digital),
+.artworkButton:focus-visible :is(.record, .cassetteCase, .cd, .digital) {
+  transform: translateY(-8px) rotate(0deg);
+}
+.artworkButton[aria-pressed="true"] .vinyl,
+.artworkButton:focus-visible .vinyl { transform: translateX(45%) rotate(15deg); }
+.artworkButton[aria-pressed="true"] .compactDisc,
+.artworkButton:focus-visible .compactDisc { transform: translateX(42%) rotate(0deg); }
+
+@media (hover: hover) {
+  .artworkButton:hover :is(.record, .cassetteCase, .cd, .digital) { transform: translateY(-8px) rotate(0deg); }
+  .artworkButton:hover .vinyl { transform: translateX(45%) rotate(15deg); }
+  .artworkButton:hover .compactDisc { transform: translateX(42%) rotate(0deg); }
+}
+
+@media (max-width: 639px) {
+  .release { width: 100%; max-width: 360px; justify-self: center; }
+  .artworkButton { height: 240px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .record, .cassetteCase, .cd, .digital, .vinyl, .compactDisc { transition: none; }
+}
