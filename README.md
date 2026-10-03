@@ -12,7 +12,8 @@ Artwork is stored in
 
 Cassette cases display only the cover artwork. Optional `artworkCrop` positions
 and zoom levels frame wraparound scans and square covers without changing the
-source images. Release details stay below each case.
+source images. A `rotation` of 90 or 270 turns landscape artwork upright inside
+the case. Release details stay below each case.
 
 The shelf supports filtering by format, mouse and keyboard interaction, and tap
 selection on touchscreens. CSS renders the cassette cases, sliding records, and CD case;

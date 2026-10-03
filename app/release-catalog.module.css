@@ -126,6 +126,20 @@
   transform-origin: var(--art-position);
 }
 
+/* Swap the image bounds before turning a landscape J-card front upright. */
+.caseInsert[data-rotated] { container-type: size; }
+
+.caseInsert[data-rotated] .cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100cqh;
+  height: 100cqw;
+  max-width: none;
+  transform: translate(-50%, -50%) rotate(var(--art-rotation)) scale(var(--art-zoom));
+  transform-origin: center;
+}
+
 .caseLid {
   position: absolute;
   inset: 0;

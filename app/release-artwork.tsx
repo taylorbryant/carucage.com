@@ -20,11 +20,16 @@ export default function ReleaseArtwork({ release, eager = false }: { release: Re
     const cropStyle = {
       "--art-position": release.artworkCrop?.position ?? "50% 50%",
       "--art-zoom": release.artworkCrop?.zoom ?? 1,
+      "--art-rotation": `${release.artworkCrop?.rotation ?? 0}deg`,
     } as CSSProperties;
 
     return (
       <span className={styles.cassetteCase} aria-hidden="true">
-        <span className={styles.caseInsert} style={cropStyle}>{cover}</span>
+        <span
+          className={styles.caseInsert}
+          data-rotated={release.artworkCrop?.rotation ? "true" : undefined}
+          style={cropStyle}
+        >{cover}</span>
         <span className={styles.caseLid} />
       </span>
     );

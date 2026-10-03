@@ -12,7 +12,7 @@ export type Release = {
       format: "Cassette";
       vinylSize?: never;
       // Display-only framing; the original source artwork is preserved.
-      artworkCrop?: { position: string; zoom?: number };
+      artworkCrop?: { position: string; zoom?: number; rotation?: 90 | 270 };
     }
   | { format: Exclude<ReleaseFormat, "Vinyl" | "Cassette">; vinylSize?: never }
 );
@@ -182,6 +182,7 @@ export const releases: Release[] = [
     "artist": "Gryscl / Weakness",
     "title": "Split",
     "format": "Cassette",
+    "artworkCrop": { "position": "50% 0%", "zoom": 1.12, "rotation": 90 },
     "artwork": "/releases/car-020.jpg",
     "href": "https://greyscaletn.bandcamp.com/album/greyscale-weakness-split-tape"
   },
