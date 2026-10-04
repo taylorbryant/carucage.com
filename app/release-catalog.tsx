@@ -21,7 +21,7 @@ export default function ReleaseCatalog() {
   return (
     <section aria-labelledby="catalog-heading">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h2 id="catalog-heading" className="text-xs font-medium uppercase tracking-widest text-muted">The catalog</h2>
+        <h2 id="catalog-heading" className="text-xs font-medium uppercase tracking-widest text-muted">Catalog</h2>
         <p className="text-xs text-muted">Pick something off the shelf.</p>
       </div>
 
