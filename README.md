@@ -22,7 +22,7 @@ listening links are also present in the initial HTML.
 
 ## Development
 
-Use Bun 1.4.2 as the package manager and Node.js 22 (`nvm use`) for Next.js.
+Use Bun 1.4.5 as the package manager and Node.js 24 (`nvm use`) for Next.js.
 `bun.lock` is the dependency lockfile.
 
 ```sh
@@ -37,4 +37,4 @@ TypeScript 7 supplies the `tsc` command through the `@typescript/native` package
 The `typescript` alias supplies Microsoft's TypeScript 6 compatibility API for
 ESLint and other tools. ESLint stays on the latest 9.x release because Next.js's
 lint plugins do not yet declare support for ESLint 10. Node types track the
-Node 22 runtime specified in `.nvmrc`.
+Node 24 runtime specified in `.nvmrc`.
